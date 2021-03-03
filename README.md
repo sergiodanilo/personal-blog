@@ -1,4 +1,4 @@
-# professional-blog
+# Blog
 
 ## Stack
 - Node, Express, Nest
