@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 
 import { BlogPostsService } from './blog-posts.service';
 import { BlogPostDto } from './blog-post.dto';
@@ -15,8 +15,13 @@ export class BlogPostsController {
   }
 
   @Get()
-  async findAll(): Promise<BlogPost[]> {
+  async getAllPosts(): Promise<BlogPost[]> {
     return this.postService.findAll();
+  }
+
+  @Get(":id")
+  async getPost(@Param('id') postId: string): Promise<BlogPost> {
+    return this.postService.findById(postId);
   }
 
 }

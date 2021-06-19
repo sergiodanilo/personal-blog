@@ -7,7 +7,7 @@ export type BlogPostDocument = BlogPost & Document;
 export class BlogPost {
 
   @Prop()
-  _id: string;
+  id: string;
 
   @Prop()
   title: string;
