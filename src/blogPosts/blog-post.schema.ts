@@ -13,7 +13,7 @@ export class BlogPost {
   title: string;
 
   @Prop()
-  content: number;
+  content: Array<any>;
 
   @Prop()
   created: Date;
