@@ -1,6 +1,6 @@
 export interface BlogPostDto {
   id: string;
   title: string;
-  content: string;
+  content: [];
   created: Date;
 }
